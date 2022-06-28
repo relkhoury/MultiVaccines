@@ -12,7 +12,7 @@ knitr::opts_chunk$set(echo = TRUE)
 require(tidyverse)
 require(tigerstats)
 require(knitr)
-newdata<- read.csv(file="clinicalTrial.csv")
+newdata<- read.csv(file="clinicalTrial2.csv")
 ```
 
 ```{r eval=FALSE}
@@ -45,7 +45,7 @@ chisqtestGC(table1)
 fisher.test(table1, simulate.p.value = TRUE)
 ```
 ```{r}
-fisherXY = function(x, y, confL = 0, printAll=FALSE){
+fisherXY = function(x, y, confL = 0, printAll=TRUE){
   # Inputs: 
   #   x: factor variable, 2 levels
   #   y: factor variable, n levels
@@ -112,7 +112,7 @@ fisherXY = function(x, y, confL = 0, printAll=FALSE){
 ```
 ```{r}
 fisherXY(newdata$vaxStatus,newdata$infected)
-fisherXY = function(x, y, confL = 0, printAll=FALSE){
+fisherXY = function(x, y, confL = 0, printAll=TRUE){
   # Inputs: 
   #   x: factor variable, 2 levels
   #   y: factor variable, n levels
@@ -177,5 +177,16 @@ fisherXY = function(x, y, confL = 0, printAll=FALSE){
 }
 
 ```
-Running the two variable Chi-Square test yielded a p-value less than .05; this, along with the fact that there are more than two categorcial variables, necessitates the running of a multi-variable FisherXY test.  
+Running the two variable Chi-Square test yielded a p-value less than .05; this, along with the fact that there are more than two categorical variables, necessitates the running of a multi-variable FisherXY test.  
 
+
+##
+## use fisherXY test to determine if the new vaccine is different from
+## previous vaccines.
+
+# Data set has 4 categories:
+# group with no vaccine
+# group with just the old vaccine
+# group with both the old and new vaccine
+# group with just the new vaccine
+#
