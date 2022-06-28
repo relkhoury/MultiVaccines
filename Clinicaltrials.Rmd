@@ -177,8 +177,5 @@ fisherXY = function(x, y, confL = 0, printAll=FALSE){
 }
 
 ```
-```{r}
-fisherXY(davisdata$Sex,davisdata$Seat)
-```
-
+Running the two variable Chi-Square test yielded a p-value less than .05; this, along with the fact that there are more than two categorcial variables, necessitates the running of a multi-variable FisherXY test.  
 
