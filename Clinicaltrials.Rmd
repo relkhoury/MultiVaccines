@@ -19,8 +19,12 @@ newdata<- read.csv(file="clinicalTrial.csv")
 newdata <- newdata %>%
 mutate(across(where(is.character), as.factor))
 ```
+## Graphical Analysis
+```{r}
+barchartGC(~infected + vaxStatus,data=newdata)
+barchartGC(~infected + vaxStatus,newdata, type="percent")
 
-
+```
 
 
 
