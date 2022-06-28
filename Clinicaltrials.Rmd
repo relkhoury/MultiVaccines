@@ -26,7 +26,7 @@ barchartGC(~infected + vaxStatus,newdata, type="percent")
 
 ```
 
-
+According to the proportion based graph calculated, there is a clear and tangible difference among the percentages of persons who got COVID.  It seems as though, of those who got COVID, over 60% didn't have any vaccine at all.  Conversely, the smallest proportion of persons who contracted the disease had both the first and new doses of the vaccine.  Most potent after that was the new vaccine, then the first one administered.  
 
 
 
