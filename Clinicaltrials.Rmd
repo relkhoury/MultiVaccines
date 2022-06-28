@@ -35,7 +35,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-
+The numerical summary generated confirms the illustration presented in the graphical observation.  When looking at the row total of persons who contracted COVID, a solid majority of them (62.7%) had no vaccine at all, while the fewest (5.95%) had both the first and the new vaccine, along with the strongest dose regiments following that being the new and first vaccines, in such order.  
 
 
 
